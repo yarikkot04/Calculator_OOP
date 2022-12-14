@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.menu[close='false']{
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  width: 365px;
+  height: 300px;
+  background-color: #000;
+  box-shadow: 2px 2px 2px #4f4f4f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  user-select: none;
+}
+
+.menu[close='true']{
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  width: 365px;
+  height: 30px;
+  background-color: #000;
+  box-shadow: 2px 2px 2px #4f4f4f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.8rem;
+  color: #fff;
+  user-select: none;
+}
+.menu p:hover{
+  filter: brightness(120%);
+}
+.menu p:active {
+  filter: brightness(90%);
+}
+#calculatorDec {
+  position: absolute;
+  background-color: #000;
+  top: 50px;                         /* 3 */
+  left: 736px;
+  height: 770px;
+  width: 435px;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 2px 2px 2px #4f4f4f;
+  padding: 40px;
+  font-family: Arial;
+}
+#calculatorBin {
+  position: absolute;
+  background-color: #000;
+  height: 600px;
+  width: 425px;
+  top: 50px;                         /* 3 */
+  left: 736px;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 2px 2px 2px #4f4f4f;
+  padding: 40px;
+  font-family: Arial;
+}
+#calculatorHex {
+  position: absolute;
+  background-color: #000;
+  height: 870px;
+  width: 425px;
+  top: 50px;                         /* 3 */
+  left: 736px;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 2px 2px 2px #4f4f4f;
+  padding: 40px;
+  font-family: Arial;
+}
+.inputField {
+  height: 115px;
+  padding: 15px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+}
+.inputField p{
+  text-align: right;
+  font-size: 3.5rem;
+  margin: 0;
+}
+.table{
+  position: absolute;
+  left: 100px;
+}
+.btn {
+  margin: 7px;
+  width: 90px;
+  height: 90px;
+  background-color: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 90px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+.zero {
+  width: 190%;
+  border-radius: 36px;
+}
+.dot {
+  position: relative;
+  left: 106px;
+}
+.last {
+  font-size: 2rem;
+}
+.clear {
+  position: relative;
+  left: 106px;
+}
+.clear-last {
+  position: absolute;
+  left: 360px;
+  top : 720px;
+}
+.equal {
+  position: absolute;
+  border-radius: 40px;
+  width: 295px;
+  top: 720px;
+  left : 43px;
+  font-size: 3rem;
+}
+.btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  font-size: 2.4rem;
+  filter: brightness(90%);
+}
+.equal:active {
+  font-size: 3.4rem;
+  filter: brightness(90%);
+}
+.action {
+  background-color: #ff9501;
+}
+.secAction {
+  background-color: #a6a6a6;
+}
+.binZero{
+  position: absolute;
+  left: 23px;
+  top: 322px;
+  width: 193px;
+  border-radius: 36px;
+}
+.binOne{
+  position: absolute;
+  left: 23px;
+  top: 427px;
+  width: 193px;
+  border-radius: 36px;
+}
+.binDot{
+  position: absolute;
+  left: 23px;
+  top: 535px;
+  width: 193px;
+  border-radius: 36px;
+}
+#tableBinButtons {
+  position: absolute ;
+  left : 20px;
+  top : 215px;
+}
+#tableBinActions {
+  position: absolute ;
+  left : 250px;
+  top : 215px;
+}
+.actionBin {
+  background-color: #ff9501;
+}
+.secActionBin {
+  background-color: #a6a6a6;
+}
+.binEqual:active {
+  font-size: 3.4rem;
+  filter: brightness(90%);
+}
+.inputFieldBin {
+  height: 115px;
+  padding: 15px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+}
+.inputFieldBin p{
+  text-align: right;
+  font-size: 3.5rem;
+  margin: 0;
+}
+.actionHex {
+  background-color: #ff9501;
+}
+.secActionHex {
+  background-color: #a6a6a6;
+}
+.HexEqual {
+  position: absolute;
+  left: 260px;
+  top: 825px;
+  width: 193px;
+  border-radius: 36px;
+}
+.inputFieldHex {
+  height: 115px;
+  padding: 15px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+}
+.inputFieldHex p{
+  text-align: right;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.menuField{
+  background-color: #ff9501;
+  height: 45px;
+  line-height: 45px;
+  width: 300px;
+  margin: 35px;
+  border-radius: 36px;
+}
+
+.menuField:hover{
+  filter: brightness(120%);
+}
+.menuField:active {
+  filter: brightness(90%);
+}

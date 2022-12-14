@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/calculator.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="menu" close="false"><p id="text">Menu</p></div>
+  <div id="calculatorDec">
+    <div class="inputField"><p>0</p></div>
+    <div class="buttons">
+      <table id="table">
+        <tr>
+          <td><div class="btn action plus">+</div></td>
+          <td><div class="btn action minus">-</div></td>
+          <td><div class="btn action mult">×</div></td>
+          <td><div class="btn action division">÷</div></td>
+
+        </tr>
+        <tr>
+          <td><div class="btn num one number">1</div></td>
+          <td><div class="btn num two number">2</div></td>
+          <td><div class="btn num three number">3</div></td>
+          <td><div class="btn action fraction">1/X</div></td>
+        </tr>
+        <tr>  
+          <td><div class="btn num four number">4</div></td>
+          <td><div class="btn num five number">5</div></td>
+          <td><div class="btn num six number" >6</div></td>
+          <td><div class="btn action plus-minus">±</div></td>
+        </tr>
+        <tr>
+          <td><div class="btn num seven number">7</div></td> 
+          <td><div class="btn num eight number">8</div></td>
+          <td><div class="btn num nine number">9</div></td>
+          <td><div class="btn action brackets">()</div></td>
+        </tr>
+        <tr>
+          <td><div class="btn num zero number">0</div></td>
+          <td><div class="btn dot dott">.</div></td>
+          <td><div class="btn secAction clear  bclear">C</div></td>
+        </tr>
+       </table>
+      <div class="btn action equal">=</div>
+      <div class="btn secAction clear-last bclear-last">←</div>
+    </div>
+    </div>
+      <div id="calculatorHex"  hidden>
+        <div class="inputFieldHex"><p>0</p></div>
+        <div class="buttonsHex">
+          <table id="tableHex">
+            <tr>
+              <td><div class="btn actionHex plus">+</div></td>
+              <td><div class="btn actionHex minus">-</div></td>
+              <td><div class="btn actionHex mult">×</div></td>
+              <td><div class="btn actionHex division">÷</div></td>
+      
+            </tr>
+            <tr>
+              <td><div class="btn numHex HexOne number">1</div></td>
+              <td><div class="btn numHex HexTwo number">2</div></td>
+              <td><div class="btn numHex HexThree number">3</div></td>
+              <td><div class="btn actionHex fraction">1/X</div></td>
+            </tr>
+            <tr>  
+              <td><div class="btn numHex HexFour number">4</div></td>
+              <td><div class="btn numHex HexFive number">5</div></td>
+              <td><div class="btn numHex HexSix number">6</div></td>
+              <td><div class="btn actionHex plus-minus">±</div></td>
+            </tr>
+            <tr>
+              <td><div class="btn numHex HexSeven number">7</div></td> 
+              <td><div class="btn numHex HexEight number">8</div></td>
+              <td><div class="btn numHex HexNine number">9</div></td>
+              <td><div class="btn actionHex brackets">()</div></td>
+            </tr>
+            <tr>
+              <td><div class="btn numHex HexA number">A</div></td>
+              <td><div class="btn numHex HexB number" >B</div></td>
+              <td><div class="btn numHex HexC number">C</div></td>
+              <td><div class="btn secActionHex HexClear-last bclear-last">←</div></td>
+            </tr>
+            <tr>
+              <td><div class="btn numHex HexD number">D</div></td>
+              <td><div class="btn numHex HexE number">E</div></td>
+              <td><div class="btn numHex HexF number">F</div></td>
+              <td><div class="btn secActionHex HexClear bclear">C</div></td>
+            </tr>
+            <tr>
+              <td><div class="btn numHex HexZero number">0</div></td>
+              <td><div class="btn dotHex HexDot dott">.</div></td>
+            </tr>
+           </table>
+           <div class="btn actionHex HexEqual">=</div>
+        </div>
+    </div>
+    <div id="calculatorBin" hidden>
+      <div class="inputFieldBin"><p>0</p></div>
+      <div class="buttonsBin">
+        <table id="tableBinButtons">
+          <tr>
+            <td><div class="btn secActionBin binClear bclear" >C</div></td>
+            <td><div class="btn secActionBin binClear-last bclear-last">←</div></td>
+          </tr>
+        </table>
+        <table id="tableBinActions">
+          <tr>
+            <td><div class="btn actionBin plus">+</div></td>
+            <td><div class="btn actionBin minus">-</div></td>
+          </tr>
+          <tr>
+            <td><div class="btn actionBin mult">×</div></td>
+            <td><div class="btn actionBin division">÷</div></td>
+          </tr>
+          <tr>
+            <td><div class="btn actionBin binFraction">1/X</div></td>
+            <td><div class="btn actionBin plus-minus">±</div></td>
+          </tr>   
+          <tr>
+            <td><div class="btn actionBin brackets">()</div></td>
+            <td><div class="btn actionBin binEqual">=</div></td>
+          </tr>
+        </table>
+        <div class="btn numBin binZero number">0</div>
+        <div class="btn numBin binOne number">1</div>
+        <div class="btn dotBin binDot dott">.</div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
