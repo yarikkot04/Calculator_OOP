@@ -27,6 +27,7 @@ export class Menu {
       firstField.className = 'Dec';
       firstField.classList.add('menuField');
       firstField.setAttribute('selected','false');
+      firstField.style.backgroundColor = '#CC0000';
       secondField.className = ('Hex ');
       secondField.classList.add('menuField');
       secondField.setAttribute('selected','false');
@@ -52,6 +53,7 @@ export class Menu {
     };
   };
   chooseMode(val, modArr) {
+    if(document.querySelector('.Dec')) document.querySelector('.Dec').style.backgroundColor = '#ff9501';
     if(this.#tmp) this.#tmp.style.backgroundColor = '#ff9501';
     for (let i = 0; i < modArr.length; i++) {
       modArr[i].setAttribute('hidden', 'true');

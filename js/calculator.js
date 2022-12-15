@@ -349,12 +349,10 @@ export class Calculator {
     console.log(bracketsBtn)
     for (const key of bracketsBtn) {
       key.addEventListener('click', () => {
-        console.log('brackets')
         if (this.calculator.children[0].children[0].textContent.endsWith('/')) return;
         if (this.calculator.children[0].children[0].textContent == '0') {
           this._countOpenBracket = 0;
           this._countCloseBracket = 0;
-          console.log('brackets1')
           this._countOpenBracket = 0;
           this.calculator.children[0].children[0].textContent = '(';
           this._actionLast = true;
@@ -377,7 +375,6 @@ export class Calculator {
           }
         } else if (this.#endNum) {
           if (this.calculator.children[0].children[0].textContent.length == 1) {
-            console.log(this._countOpenBracket)
             if (!isNaN(+this.calculator.children[0].children[0].textContent.slice(-1))) {
               this._countOpenBracket = 0;
             };
@@ -400,7 +397,6 @@ export class Calculator {
               this._actionLast = true;
               this._counter += 1;
             } else {
-              console.log(this.calculator)
               if (this.calculator.children[0].children[0].textContent.endsWith('.')) return;
               this.calculator.children[0].children[0].textContent += '×(';
               this._dotIs = false;
@@ -411,7 +407,6 @@ export class Calculator {
             }
           }
         } else {
-          console.log('brackets9')
           this.calculator.children[0].children[0].textContent += '×(';
           this._dotIs = false;
           ++this._countOpenBracket;
@@ -478,7 +473,6 @@ export class HexCalculator extends Calculator {
         for (let i = 0; i < arr.length; i++) {
           if (arg == arr[i]) coincidence.push(true);
         };
-        console.log(coincidence)
         if (coincidence.length) return false;
         return true;
       };
