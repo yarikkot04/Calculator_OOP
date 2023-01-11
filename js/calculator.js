@@ -106,6 +106,17 @@ export class Calculator {
     this._actionSignLast = false;
     this._tmp;
   };
+  _rebootClearFlags(){
+    this._actionLast = false;
+    this._counter = 1;
+    this._countOpenBracket = 0;
+    this._countCloseBracket = 0;
+    this._lastNumPositive = true;
+    this._lastFraction = false;
+    this._dotIs = false;
+    this._actionSignLast = false;
+    this._tmp;
+  }
   rebootCalc() {
     if (!this.#rebootStat) {
       if (this.calculator.children[0].children[0].textContent.length == 1) {
@@ -168,15 +179,7 @@ export class Calculator {
       key.addEventListener('click', () => {
         this.calculator.children[0].children[0].style.fontSize = '3.5rem';
         this.calculator.children[0].children[0].textContent = '0';
-        this._actionLast = false;
-        this._counter = 1;
-        this._countOpenBracket = 0;
-        this._countCloseBracket = 0;
-        this._lastNumPositive = true;
-        this._lastFraction = false;
-        this._dotIs = false;
-        this._actionSignLast = false;
-        this._tmp;
+        this._rebootClearFlags();
       });
     }
   };
@@ -192,15 +195,7 @@ export class Calculator {
         else {
           if (this._counter <= 10) {
             if (this.calculator.children[0].children[0].textContent == '0') {
-              this._actionLast = false;
-              this._counter = 1;
-              this._countOpenBracket = 0;
-              this._countCloseBracket = 0;
-              this._lastNumPositive = true;
-              this._lastFraction = false;
-              this._dotIs = false;
-              this._actionSignLast = false;
-              this._tmp;
+              this._rebootClearFlags();
             }
             this.calculator.children[0].children[0].style.fontSize = '3.45rem';
             this._clearLastFontConf();
@@ -346,7 +341,6 @@ export class Calculator {
   };
   brackets() {
     const bracketsBtn = document.querySelectorAll('.brackets');
-    console.log(bracketsBtn)
     for (const key of bracketsBtn) {
       key.addEventListener('click', () => {
         if (this.calculator.children[0].children[0].textContent.endsWith('/')) return;
