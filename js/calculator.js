@@ -14,7 +14,7 @@ export class Calculator {
 
   constructor(obj) {
     this.calculator = obj;
-  }
+  };
   _actionConf(arg) {
     if (this.calculator.children[0].children[0].textContent.endsWith('/')) return;
     if (!this._actionLast) {
@@ -50,7 +50,7 @@ export class Calculator {
       this.#endNum = true;
       this._counter += 1;
       this._lastNumPositive = true;
-    }
+    };
   };
   _clearLastFontConf() {
     if (this.calculator.children[0].children[0].textContent.slice(-1) == ')') {
@@ -98,7 +98,7 @@ export class Calculator {
       this._dotIs = true;
     } else {
       this._dotIs = false;
-    }
+    };
     this._countOpenBracket = 0;
     this._countCloseBracket = 0;
     this._lastNumPositive = true;
@@ -116,7 +116,7 @@ export class Calculator {
     this._dotIs = false;
     this._actionSignLast = false;
     this._tmp;
-  }
+  };
   rebootCalc() {
     if (!this.#rebootStat) {
       if (this.calculator.children[0].children[0].textContent.length == 1) {
@@ -156,9 +156,9 @@ export class Calculator {
         } else if (this._counter <= 24) {
           this.calculator.children[0].children[0].style.fontSize = '1.45rem';
           this._onClickBtnFontConf(key);
-        }
-      })
-    }
+        };
+      });
+    };
   };
   onclickDot() {
     const dotMenu = document.querySelectorAll('.dott');
@@ -170,8 +170,8 @@ export class Calculator {
         if (this._dotIs) return;
         this.calculator.children[0].children[0].textContent += key.innerHTML;
         this._dotIs = true;
-      })
-    }
+      });
+    };
   };
   clear() {
     const clearBtn = document.querySelectorAll('.bclear');
@@ -181,7 +181,7 @@ export class Calculator {
         this.calculator.children[0].children[0].textContent = '0';
         this._rebootClearFlags();
       });
-    }
+    };
   };
   clearLast() {
     const clearLastBtn = document.querySelectorAll('.bclear-last');
@@ -205,10 +205,10 @@ export class Calculator {
           } else if (this._counter <= 29) {
             this.calculator.children[0].children[0].style.fontSize = '1.45rem';
             this._clearLastFontConf();
-          }
-        }
-      })
-    }
+          };
+        };
+      });
+    };
   };
   plus() {
     const btnPlus = document.querySelectorAll('.plus');
@@ -223,24 +223,24 @@ export class Calculator {
     for (const key of btnMinus) {
       key.addEventListener('click', () => {
         this._actionConf(key);
-      })
-    }
+      });
+    };
   };
   mult() {
     const btnMult = document.querySelectorAll('.mult');
     for (const key of btnMult) {
       key.addEventListener('click', () => {
         this._actionConf(key);
-      })
-    }
+      });
+    };
   };
   division() {
     const btnDivision = document.querySelectorAll('.division');
     for (const key of btnDivision) {
       key.addEventListener('click', () => {
         this._actionConf(key);
-      })
-    }
+      });
+    };
   };
   changeSign() {
     const sign = document.querySelectorAll('.plus-minus');
@@ -281,8 +281,8 @@ export class Calculator {
           this._dotIs = false;
           this._lastNumPositive = true;
         };
-      })
-    }
+      });
+    };
   };
   toFraction() {
     const fraction = document.querySelectorAll('.fraction');
@@ -322,10 +322,10 @@ export class Calculator {
             this._dotIs = false;
             this._counter -= 2;
             this._lastFraction = false;
-          }
-        }
-      })
-    }
+          };
+        };
+      });
+    };
   };
   showResult() {
     const equal = document.querySelector('.equal');
@@ -366,13 +366,13 @@ export class Calculator {
             this._actionLast = true;
             ++this._countOpenBracket;
             this._counter += 1;
-          }
+          };
         } else if (this.#endNum) {
           if (this.calculator.children[0].children[0].textContent.length == 1) {
             if (!isNaN(+this.calculator.children[0].children[0].textContent.slice(-1))) {
               this._countOpenBracket = 0;
             };
-          }
+          };
           if (this._countOpenBracket - 1 >= this._countCloseBracket) {
             if (this.calculator.children[0].children[0].textContent.length == 1) return;
             if (this.calculator.children[0].children[0].textContent.endsWith('.')) return;
@@ -398,8 +398,8 @@ export class Calculator {
               this._actionLast = true;
               this._actionSignLast = false;
               this._counter += 1;
-            }
-          }
+            };
+          };
         } else {
           this.calculator.children[0].children[0].textContent += '×(';
           this._dotIs = false;
@@ -407,9 +407,9 @@ export class Calculator {
           this._actionLast = true;
           this._actionSignLast = false;
           this._counter += 1;
-        }
-      })
-    }
+        };
+      });
+    };
   };
 }
 export class HexCalculator extends Calculator {
@@ -422,7 +422,7 @@ export class HexCalculator extends Calculator {
       if (arr[indx] == 'D') arr[indx] = '13';
       if (arr[indx] == 'E') arr[indx] = '14';
       if (arr[indx] == 'F') arr[indx] = '15';
-    }
+    };
     let res = 0;
     const length = `${num}`.length;
     const strNum = num.toString();
@@ -431,7 +431,7 @@ export class HexCalculator extends Calculator {
       let strTmpArr = strNum.split('/');
       res = this._hexCalc(strTmpArr[0]) / this._hexCalc(strTmpArr[1]);
       return res;
-    }
+    };
     if (strNum.includes('.')) {
       let strNumArr = strNum.split('.');
       const intPartLength = strNumArr[0].length;
@@ -512,7 +512,7 @@ export class HexCalculator extends Calculator {
         } else if (!isNaN(this._hexCalc(brknFieldArr[i]))) {
           inputValue += numbersArr[n];
           ++n;
-        }
+        };
       };
       this.#result = new Function(`return ${inputValue.replaceAll('×', '*').replaceAll('÷', '/')}`);
       this.calculator.children[0].children[0].textContent = this.#result().toString(16).toUpperCase();
@@ -636,11 +636,11 @@ export class BinCalculator extends Calculator {
           this._counter -= 2;
           this._lastFraction = false;
           this._fontСonfigurationInRes();
-        }
-      }
+        };
+      };
     })
   };
-}
+};
 
 
 

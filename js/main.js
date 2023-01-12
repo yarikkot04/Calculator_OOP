@@ -29,7 +29,7 @@ btnMenu.addEventListener('click', (event) => {
     menu.setAttribute('close', 'false');
     closeStatus = false;
     objMenu.buildMenu(menu);
-  }
+  };
 });
 checkMode(0);
 for (let key of Array.from(menuFields)) {
@@ -49,7 +49,7 @@ for (let key of Array.from(menuFields)) {
         })
       }
       key.removeAttribute('selected');
-    }
+    };
   });
 };
 function checkMode(mode) {
